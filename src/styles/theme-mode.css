@@ -1,0 +1,141 @@
+body {
+  --text-color: #eeeeeed5;
+  --bkg-color: #17191a;
+  --nav-color: #3a015c;
+  --brand-color: #dddddd;
+  --navitem-color: #e500a4;
+  --search-bg1-color: #d7e259;
+  --search-bg2-color: #00c3ff;
+  --search-color: #009ad6;
+  --placeholder-color: #ff6d6d;
+  --card-color: #170324;
+  --card-shadow: #fff;
+  --button-color: #a3a1a17c;
+  --button1-color: #cececeb2;
+  --modal-color: #ddd;
+  --aside-color: #35012c;
+  --footer-color: #112936;
+  --footer-head-color: #ff7f50;
+}
+
+body.light-theme {
+  --text-color: #222;
+  --bkg-color: #eee;
+  --nav-color: #66daf7;
+  --brand-color: #7a7a7a;
+  --navitem-color: #ff0f7b;
+  --search-bg1-color: #ad2a2a;
+  --search-bg2-color: #f030e0;
+  --search-color: #ffffff;
+  --placeholder-color: #180909;
+  --card-color: #b388eb;
+  --card-shadow: #000;
+  --button-color: #6363637c;
+  --button1-color: #d3d3d3;
+  --modal-color: #e9e5e5;
+  --aside-color: #8093f1;
+  --footer-color: #f7aef8;
+  --footer-head-color: #4e24e6;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+  body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #17191a;
+  }
+  nav-brand {
+    text-shadow: 0 0 50px var(--brand-color), 0 0 30px var(--brand-color), 0 0 30px var(--brand-color);
+  }
+  card-list {
+    color: var(--button-color);
+    -webkit-box-shadow: 2px 1px 15px 1px var(--card-shadow);
+    -moz-box-shadow: 2px 1px 15px 1px var(--card-shadow);
+    box-shadow: 2px 1px 15px 1px var(--card-shadow);
+  }
+  card-list h3 {
+    color: var(--text-color);
+  }
+  card-list button:hover {
+    color: var(--button1-color);
+  }
+  .modal-content {
+    background: var(--modal-color);
+  }
+}
+
+body {
+  background: var(--bkg-color);
+}
+
+nav-brand {
+  text-shadow: 0 0 10px var(--brand-color), 0 0 25px var(--brand-color), 0 0 30px var(--brand-color);
+}
+
+card-list {
+  background: var(--card-color);
+  color: var(--button-color);
+  -webkit-box-shadow: 2px 1px 15px -5px var(--card-shadow);
+  -moz-box-shadow: 2px 1px 15px -5px var(--card-shadow);
+  box-shadow: 2px 1px 15px -5px var(--card-shadow);
+}
+
+card-list h3 {
+  color: var(--text-color);
+}
+
+card-list button:hover {
+  color: var(--button1-color);
+}
+
+h1,
+h2,
+p {
+  color: var(--text-color);
+}
+
+button {
+  background: var(--bkg-color);
+  color: var(--text-color);
+}
+
+footer {
+  background: var(--footer-color);
+}
+
+#cocktailButtonSearch {
+  background: var(--search-bg1-color);
+  color: var(--search-color);
+}
+
+#cocktailSearching::placeholder {
+  color: var(--placeholder-color);
+}
+
+#cocktailButtonSearch:hover {
+  background: var(--search-bg2-color);
+  color: white;
+}
+
+.navbar {
+  background: var(--nav-color);
+}
+
+.menu label:hover {
+  color: var(--navitem-color);
+}
+
+.modal-content {
+  background: var(--modal-color);
+}
+
+.footer-item h3 {
+  color: var(--footer-head-color);
+}
+
+.footer-item a {
+  color: var(--text-color);
+}

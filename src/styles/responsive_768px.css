@@ -1,0 +1,56 @@
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    padding-bottom: 1rem !important;
+  }
+  nav-brand {
+    font-size: 1.4em !important;
+  }
+  .navbar label {
+    display: inline-flex !important;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+  #hamburger:checked~.menu {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  #toggler-search:checked~.search {
+    position: relative;
+    right: 0;
+  }
+  search-box {
+    padding: 0 10px;
+    width: 100%;
+  }
+  #cocktailSearching {
+    width: 50%;
+  }
+  .content>drink-data {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+  .modal-dialog {
+    width: 85%;
+  }
+  .modal-detail>img {
+    margin: 10px 0;
+    width: 100%;
+    height: 230px;
+  }
+  footer {
+    font-size: 0.9em !important;
+  }
+  .foot-container {
+    margin: 2em 1em;
+  }
+  .main-footer {
+    justify-content: space-around;
+  }
+  .brand-banner {
+    height: 40%;
+  }
+}
