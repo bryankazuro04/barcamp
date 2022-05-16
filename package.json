@@ -5,7 +5,7 @@
   "main": "function.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js  --output public",
+    "build": "webpack --config webpack.prod.js ",
     "lint:scripts": "eslint --fix --ext .js --ignore-path .gitignore ."
   },
   "keywords": [
