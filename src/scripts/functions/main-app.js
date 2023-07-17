@@ -4,21 +4,16 @@ import CocktailData from "./data";
 
 const main = () => {
   const containerData = document.querySelector("drink-data");
+  const abjads = ["a", "b", "c", "d", "e"];
 
-  const cocktailItem1 = () => {
-    CocktailData.cocktailsA().then(renderCocktail).then(resMessage);
-  };
-
-  const cocktailItem2 = () => {
-    CocktailData.cocktailsB().then(renderCocktail).then(resMessage);
-  };
-
-  const cocktailItem3 = () => {
-    CocktailData.cocktailsZ().then(renderCocktail).then(resMessage);
+  const cocktailItem = () => {
+    abjads.forEach((abjad) => {
+      CocktailData.cocktails(abjad).then(renderCocktail).then(resMessage);
+    });
   };
 
   const searchForm = document.querySelector("search-box");
-  const test = async() => {
+  const searchCocktail = async () => {
     try {
       const hasil = await CocktailData.cocktailSearch(searchForm.value);
       renderCocktail.innerHTML = "";
@@ -27,7 +22,7 @@ const main = () => {
       resMessage(error);
     }
   };
-  searchForm.search = test;
+  searchForm.search = searchCocktail;
 
   searchForm.addEventListener("keyup", (e) => {
     const searchDrink = e.target.value.toLowerCase();
@@ -56,9 +51,7 @@ const main = () => {
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    cocktailItem1();
-    cocktailItem2();
-    cocktailItem3();
+    cocktailItem();
   });
 };
 

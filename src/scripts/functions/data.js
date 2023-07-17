@@ -9,12 +9,8 @@ class CocktailData {
       .then((response) => response.data.drinks)
       .catch((error) => error);
   };
-
-  static cocktailsA = () => this.getCocktails("/search.php?f=a");
-  static cocktailsB = () => this.getCocktails("/search.php?f=b");
-  static cocktailsZ = () => this.getCocktails("/search.php?f=z");
-  static cocktailSearch = (keyword) =>
-    this.getCocktails(`/search.php?s=${keyword}`);
+  static cocktails = (abjad) => this.getCocktails(`/search.php?f=${abjad}`);
+  static cocktailSearch = (keyword) => this.getCocktails(`/search.php?s=${keyword}`);
 }
 
 export default CocktailData;
