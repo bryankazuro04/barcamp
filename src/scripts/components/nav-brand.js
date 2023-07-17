@@ -1,4 +1,8 @@
 class NavBrand extends HTMLElement {
+  connectedCallback() {
+    this.render();
+  }
+
   set brandNavbar(brand) {
     this._brandNavbar = brand;
     this.render();
