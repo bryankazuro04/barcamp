@@ -6,7 +6,7 @@ class CardList extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <img src="${this._cards.strDrinkThumb}" alt="${this._cards.strDrink}">
+      <img src="${this._cards.strDrinkThumb}" alt="${this._cards.strDrink}" loading="lazy">
 
       <div class="d-fl fai-c fjc-sb detail">
         <h3>${this._cards.strDrink}</h3>
